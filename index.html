@@ -24,23 +24,24 @@
     <div class="col-xs-6 col-md-8">
         <div class="panel panel-default">
             <div class="panel-body">
-                <h2>How to Play</h2>
+                <h2 class="box-header">How to Play</h2>
             </div>
-            <div class="panel-body">
-                <p>You will be given a random number at the start of the game.</p>
-                <p>There are four crystals below.  By clicking on a crystal you will be adding a specific amount of points to your score.</p>
-                <p>You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number.</p>
-                <p>The value of each crystal is hidden from you until you click on it.</p>
-                <p>Each time the game starts, the game will chage the values of each crystal.</p>
+            <div class="panel-body" id="rules">
+                <li>You will be given a random number at the start of the game.</li >
+                <li>There are four crystals below.  By clicking on a crystal you will be adding a specific amount of points to your score.</li>
+                <li>You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number.</li>
+                <li>The value of each crystal is hidden from you until you click on it.</li>
+                <li>Each time the game starts, the game will chage the values of each crystal.</li>
             </div>
         </div> 
     </div>  
     <div class="col-xs-6 col-md-4">   
         <div class="panel panel-default">
             <div class="panel-body">
-                <h3>Wins: </h3>
+                <h2 class="box-header">Results</h2>
             </div>
-            <div class="panel-body">
+            <div class="panel-body" id="tally">
+                <h3>Wins: </h3>
                 <h3>Losses: </h3>
             </div>
         </div> 
@@ -53,10 +54,10 @@
     <div class="col-xs-6 col-md-3">
          <div class="panel panel-default">
             <div class="panel-body">
-                <h3>Target Number</h3>
+                <h2 class="box-header">Target Number</h2>
             </div>
             <div class="panel-body">
-                <p>Random Number</p>
+                <p class="number">0</p>
             </div>
         </div>
     </div>
@@ -65,10 +66,10 @@
     <div class="col-xs-6 col-md-3">    
         <div class="panel panel-default">
             <div class="panel-body">
-                <h3>Your Total Score</h3>
+                <h2 class="box-header">Your Total Score</h2>
             </div>
             <div class="panel-body">
-                <p>Total Score</p>    
+                <p class="number">0</p>    
             </div>
         </div>
     </div> 
@@ -80,24 +81,24 @@
 
 <div class="row">
         <div class="col-xs-6 col-md-3">
-            <a href="#" class="btn btn-info" class="crystal" role="button">
+            <button type="button" onclick="add" class="crystals">
                 <img class="crystals-image" id="crystals-1" src="assets/images/crystals-1.jpg" alt="Crystal">
-            </a>
+            </button> 
         </div> 
         <div class="col-xs-6 col-md-3">
-            <a href="#" class="btn btn-info" class="crystal" role="button">
+            <button type="button" onclick="add" class="crystals">
                 <img class="crystals-image" id="crystals-2" src="assets/images/crystals-2.jpg" alt="Crystal">
-            </a>
+            </button>
         </div>    
         <div class="col-xs-6 col-md-3">
-            <a href="#" class="btn btn-info" class="crystal" role="button">
+            <button type="button" onclick="add" class="crystals">
                 <img class="crystals-image" id="crystals-3" src="assets/images/crystals-3.jpg" alt="Crystal">
-            </a>
+            </button>
         </div>
         <div class="col-xs-6 col-md-3">   
-            <a href="#" class="btn btn-info" class="crystal" role="button">
+            <button type="button" onclick="add" class="crystals">
                 <img class="crystals-image" id="crystals-4" src="assets/images/crystals-4.jpg" alt="Crystal">
-            </a>
+            </button>
         </div>
 </div>
         
