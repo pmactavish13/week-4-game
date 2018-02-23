@@ -12,78 +12,97 @@
 </head>
 
 <body>
-<div id="container">
 
 <!-- Main Screen -->
-<div id="crystalsCollector" style="display:none">
+<div id="crystalsCollector">
     <div class="page-header">
         <h1>Crystals Collector!</h1>
-    </div>
-
-<div class="panel panel-default">
-    <div class="panel-body">
-        <h2>How to Play</h2>
-    </div>
-    <div class="panel-body">
-        <p>You will be given a random number at the start of the game.</p>
-        <br>
-        <p>There are four crystals below.  By clicking on a crystal you will be adding a specific amount of points to your score.</p>
-        <br>
-        <p>You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number.</p>
-        <br>
-        <p>The value of each crystal is hidden from you until you click on it.</p>
-        <br>
-        <p>Each time the game starts, the game will chage the values of each crystal.</p>
-    </div>
-</div>
-    
-<div class="panel panel-default">
-    <div class="panel-body">
-        <h3>Target Number</h3>
-    </div>
-    <div class="panel-body">
-       <p>Random Number</p>
-    </div>
-</div>
-    
-<div class="panel panel-default">
-    <div class="panel-body">
-        <h3>Wins: </h3>
-    </div>
-    <div class="panel-body">
-        <p>Losses: </p>>
     </div>
 </div>
 
 <div class="row">
+    <div class="col-xs-6 col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h2>How to Play</h2>
+            </div>
+            <div class="panel-body">
+                <p>You will be given a random number at the start of the game.</p>
+                <p>There are four crystals below.  By clicking on a crystal you will be adding a specific amount of points to your score.</p>
+                <p>You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number.</p>
+                <p>The value of each crystal is hidden from you until you click on it.</p>
+                <p>Each time the game starts, the game will chage the values of each crystal.</p>
+            </div>
+        </div> 
+    </div>  
+    <div class="col-xs-6 col-md-4">   
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>Wins: </h3>
+            </div>
+            <div class="panel-body">
+                <h3>Losses: </h3>
+            </div>
+        </div> 
+    </div>
+</div>    
+
+<div class="row">
+    <div class="col-xs-6 col-md-2">
+    </div>
     <div class="col-xs-6 col-md-3">
-        <a href="#" class="thumbnail">
-            <img src="..." alt="...">
-        </a>
-        <a href="#" class="thumbnail">
-            <img src="..." alt="...">
-        </a>
-        <a href="#" class="thumbnail">
-            <img src="..." alt="...">
-        </a>
-        <a href="#" class="thumbnail">
-            <img src="..." alt="...">
-        </a>
+         <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>Target Number</h3>
+            </div>
+            <div class="panel-body">
+                <p>Random Number</p>
+            </div>
+        </div>
     </div>
-</div>
-
-<div class="panel panel-default">
-    <div class="panel-body">
-        <h3>Your Total Score Is: </h3>
+    <div class="col-xs-6 col-md-2">
     </div>
-    <div class="panel-body">
-        Total Score    
+    <div class="col-xs-6 col-md-3">    
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>Your Total Score</h3>
+            </div>
+            <div class="panel-body">
+                <p>Total Score</p>    
+            </div>
+        </div>
+    </div> 
+    <div class="col-xs-6 col-md-2"><div class="col-xs-6 col-md-2"></div>
     </div>
-</div>
-
-</div>
+</div>       
      
+
+
+<div class="row">
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="btn btn-info" class="crystal" role="button">
+                <img class="crystals-image" id="crystals-1" src="assets/images/crystals-1.jpg" alt="Crystal">
+            </a>
+        </div> 
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="btn btn-info" class="crystal" role="button">
+                <img class="crystals-image" id="crystals-2" src="assets/images/crystals-2.jpg" alt="Crystal">
+            </a>
+        </div>    
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="btn btn-info" class="crystal" role="button">
+                <img class="crystals-image" id="crystals-3" src="assets/images/crystals-3.jpg" alt="Crystal">
+            </a>
+        </div>
+        <div class="col-xs-6 col-md-3">   
+            <a href="#" class="btn btn-info" class="crystal" role="button">
+                <img class="crystals-image" id="crystals-4" src="assets/images/crystals-4.jpg" alt="Crystal">
+            </a>
+        </div>
+</div>
+        
 <script src="assets/javascript/game.js"></script>
 
 </body>
+
 </html>
