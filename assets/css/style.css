@@ -10,7 +10,8 @@ body {
 
     .panel {
         border: #0c0d57 6px solid;
-        background-color: rgb(205, 219, 241);
+        background-color: rgb(215, 227, 252);
+        
     }
 
     h1, h2, h3 {
@@ -35,6 +36,10 @@ body {
     h3 {
         font-size: 22px;
     }
+    
+    .numSize {
+        font-size: 28px;
+    }
 
     li {
         list-style-type: disc;
@@ -56,10 +61,12 @@ body {
 
     .number {
         color: #0c0d57;
-        font-size: 50px;
+        font-size: 35px;
         text-align: center;
         margin: -28px 0 -8px 0;
+        font-weight: 550;
     }
+
     .crystals {
     border: #0c0d57 6px solid;
     }
