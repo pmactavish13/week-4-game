@@ -1,6 +1,6 @@
 body
  {
-    background: url("https://images.pexels.com/photos/313563/sand-pattern-wave-texture-313563.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb");
+    background-image: url("../images/sand-pattern-wave-texture.jpeg");
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     margin: 0 40px 40px 40px;
     }
@@ -67,12 +67,10 @@ body
         margin: -28px 0 -8px 0;
         font-weight: 550;
     }
-
-    .crystals {
-    border: #0c0d57 6px solid;
-    }
-    .crystals-image {
-       width: 220px;
-       height: 170px;
-       margin: 0 -3px 0 -3px 
+    #crystals {
+        margin-top: 10px;
+        margin-left: 40px;
+    }    
+    .crystal-button {
+        border: #0c0d57 6px solid;   
     }

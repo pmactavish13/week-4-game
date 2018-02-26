@@ -3,10 +3,9 @@ $(document).ready(function() {
 var winsCounter = [0];
 var lossesCounter = [0];
 var randomTarget = [0];
-var yourScore = [];
+var yourScore = [0];
 var crystalValue = [];
-var crystals = [firstCrystal, secondCrystal, thirdCrystal, fourthCrystal];
-var crystalImages = ["assets/images/crystals-1.jpg", "assets/images/crystals-2.jpg", "assets/images/crystals-3.jpg", "assets/images/crystals-4.jpg"];
+var crystalImages = ["assets/images/crystals-1.jpeg", "assets/images/crystals-2.jpeg", "assets/images/crystals-3.jpeg", "assets/images/crystals-4.jpeg"]
 
 $("#winsCounter").append(winsCounter);
 $("#lossesCounter").append(lossesCounter);
@@ -19,73 +18,57 @@ randomTarget = Math.floor(Math.random() * 102)+19;
 $("#randomTarget").append(randomTarget);
 
 // Generate Random Number for Crystals
-for (var i = 0; i < 4; i++) {
+for (var i = 0; i < crystalImages.length; i++) {
 randomNumber = Math.floor(Math.random() * 12) +1;
 crystalValue.push(randomNumber);
 }
 
+for (var i=0; i<crystalValue.length; i++) {
+    var crystalButtons = $("<button>");
+    crystalButtons.addClass("crystal-button crystal-image") .val(crystalValue[i]);
+   crystalButtons.attr("data-let", crystalValue[i]);
+    crystalButtons.css({
+      "background-image" : "url('" + crystalImages[i] + "')",
+      "background-size" : "100%", "width": "240px", "height": "180px", "margin-right": "35px",
+    }); 
+    $("#crystals").append(crystalButtons);
+}
+
+function initializeTotalScore() {
+   yourScore = "";
+console.log("Hello");
+$( ".crystal-image").on("click", function() {
+
+  console.log(this.value);
+  
+
+ }); 
+// //   $("#crystals").append(yourScore);
+
+ 
 
 
-            </button>
-
-
-        <div class="col-xs-6 col-md-3">   
-            <button type="button" class="crystals" id="fourthCrystal">
-                <img class="crystals-image" src="assets/images/crystals-4.jpg" alt="Crystal">
-            </button>
-
-var firstCrystal = crystalValue[0];
-var secondCrystal = crystalValue[1];
-var thirdCrystal = crystalValue[2];
-var fourthCrystal = crystalValue[3];
-
-console.log(firstCrystal);
-
- // $("#crystal-1").on("click", function() {
+} 
 
 
 
 }
-
-// var crystalButton = $("<button>");
-//crystalButton.attr("data-let",crystalValue);
-
-
-//$("#crystals").append(yourScore);
-// $(".crystals") .each(function
-// });
-
 startGame();
-
-});
-
-// while (condition) {
- //   code block to be executed
-// }
+});            
 
 
-// If your score = the computer's pick you let them know.
-//if (parseInt(youScore) === randomNumber) {
-//    winsCounter++;
-//    lockGame = true;
-//  }
+// // while (condition) { */}
+//  /* //   code block to be executed
+// // 
 
-  // If the numbers did not match. You also let them know
-//  if (parseInt(yourScore) > randomNumber) {
-//    lossesCounter++;
-//    lockGame = true;
 
-// If your pick matched the computer's pick you let them know.
-//if (parseInt(yourPick) === computerPick) {
-//    $("#result").text("Yep! You got it! Refresh the page to play again.");
-//    lockGame = true;
-//  }
+// // If your score = the computer's pick you let them know.
+// //if (parseInt(youScore) === randomNumber) curly
+// //    winsCounter++; 
+// //    lockGame = true;
+// //  curly
 
-  // If the numbers did not match. You also let them know
-//  else {
- //   $("#result").text("Nope. Refresh the page to play again.");
- //   lockGame = true;
- // }
-
-// $(#click-me").on("click", function() {
-// do whatever
+//   // If the numbers did not match. You also let them know
+// //  if (parseInt(yourScore) > randomNumber) curly
+// //    lossesCounter++;
+// //    lockGame = true;
