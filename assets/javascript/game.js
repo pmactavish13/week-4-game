@@ -2,9 +2,9 @@
 $(document).ready(function() {
 
 // variables
-var winsCounter = [0];
-var lossesCounter = [0];
-var randomTarget = [0];
+var winsCounter = (0);
+var lossesCounter = "";
+var randomTarget = "";
 var yourScore = (0);
 var crystalValue = [];
 var crystalImages = ["assets/images/crystals-1.jpeg", "assets/images/crystals-2.jpeg", "assets/images/crystals-3.jpeg", "assets/images/crystals-4.jpeg"]
@@ -12,11 +12,13 @@ var clickTotal = "";
 var yourTotalScore = "";
 
 // Counters
-$("#winsCounter").append(winsCounter);
-$("#lossesCounter").append(lossesCounter);
-$("#yourScore").append(yourScore);
+$("#winsCounter").text(winsCounter);
+$("#lossesCounter").text(lossesCounter);
+$("#yourScore").text(yourScore);
 
 function startGame() {
+  //function initializeTotalScore() {
+  // yourScore = "";
 
     // Generate Random Target Number
 randomTarget = Math.floor(Math.random() * 102)+19;
@@ -39,41 +41,37 @@ for (var i=0; i<crystalValue.length; i++) {
     $("#crystals").append(crystalButtons);
 }
 
-//function initializeTotalScore() {
-  // yourScore = "";
 
-//
+
+
 $( ".crystal-image").on("click", function() {
-this.value = parseInt(this.value, 10);
- yourTotalScore  += this.value;
+crystalClick = parseInt(this.value);
+// console.log(typeof(crystalClick));
+ yourTotalScore  += crystalClick;
+ //console.log(crystalClick);
 
- // console.log(yourTotalScore);
+//console.log(yourTotalScore);
+yourTotalScore = parseInt(yourTotalScore, 10);
+$("#yourScore").html(yourTotalScore);
 
- yourTotalScore = parseInt(yourTotalScore, 10);
+target = parseInt(randomTarget);
 
- for (var i  = 0; i < yourTotalScore.length; i++){
+if (yourTotalScore === target) {
+winsCounter++;
+$("winsCounter").text(winsCounter);
 
-  total  += yourTotalScore[i];
+}
+//$("#winsCounter").append(winsCounter);
+//$("#lossesCounter").append(lossesCounter);
+else if (yourTotalScore > target) {
+lossesCounter--;
+$("lossesCounter").html(lossesCounter);
+console.log (lossesCounter);
+}
 
-  console.log (total);
- }
-//yourTotalScore = clickTotal + clickTotal;
-//$.isNumeric("clickTotal");
-//var result = clickTotal + yourTotalScore
-//yourTotalScore.push(result);
-//newTotal = yourScore;
- //$("#yourScore").html(yourTotalScore);
-  //console.log(yourTotalScore);
-  
+
 
  }); 
-// //   $("#crystals").append(yourScore);
-//$( "#yourScore" ).replaceWith( "<h2>New heading</h2>" );
-
-//}); 
-
-
-
 }
 startGame();
 });            
