@@ -18,16 +18,12 @@ $(document).ready(function () {
     $("#winsCounter").text(winsCounter);
     $("#lossesCounter").text(lossesCounter);
     $("#yourScore").text(yourTotalScore);
-    console.log(randomTarget);
-    console.log(crystalValue);
-    console.log(clickTotal);
-    console.log(yourTotalScore);
 
     //set game parameters
     
     // Generate Random Target Number
     randomTarget = Math.floor(Math.random() * 102) + 19;
-    $("#randomTarget").append(randomTarget);
+    $("#randomTarget").text(randomTarget);
 
     // Generate Random Number for Crystals
     for (var i = 0; i < crystalImages.length; i++) {
